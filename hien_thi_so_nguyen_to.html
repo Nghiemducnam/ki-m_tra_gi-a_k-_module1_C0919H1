@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    </head>
+    <body>
+    <table>
+        <tr>
+            <td><b>Nhập vào 1 số nguyên</b></td>
+        </tr>
+
+       <tr>
+          <td><input id="ip" type="text"></td>
+          <td><button type="button" onclick="showResult()">kết quả</button></td>
+       </tr>
+</table>
+<script>
+
+
+    function showResult(){
+        let num= parseInt(document.getElementById("ip").value);
+        let i;
+    if (num<=1) {
+        return false;
+    }
+    for( i=2;i<num;i++) {
+        if( num%i==0){
+            return false;
+        }
+    }
+        document.write(i +" "+ "là số nguyên tố");
+
+    }
+
+</script>
+</body>
+</html>
